@@ -1,0 +1,180 @@
+Do you do database testing?
+  -- we are using structured query language we test relational data bases like oracle or mysql
+
+
+JDBC:
+The Java Database Connectivity (JDBC) API provides universal data access from the
+Java programming language. Using the JDBC API, you can access virtually any data
+source, from relational databases to spreadsheets and flat files.
+
+The Microsoft JDBC Driver for SQL Server is a Type 4 JDBC driver that provides database connectivity with SQL Server through the standard JDBC application program interfaces (APIs).
+
+
+While JDBC provides a complete dynamic SQL interface from Java to relational databases,
+SQLJ fills a complementary role for static SQL. Although you can use static
+ SQL statements in your JDBC programs, they can be represented more conveniently in SQLJ.
+
+
+
+
+A ResultSet is a Java object that contains the results of executing an SQL query.
+ In other words, it contains the rows that satisfy the conditions of the query.
+ b   The data stored in a ResultSet object is retrieved through a set of
+get methods that allows access to the various columns of the current row. The ResultSet.
+
+
+
+   Single Row Functions
+
+  Single row functions will be executed for
+  each row and return the value for each row
+  substr(), upper(), initcap(),lower(), length(),round(), trunc(), mod(), replace(),concat()
+
+   MultiRow Functions
+   It will be executed for all rows but it will
+   return single result.
+
+    avg(), max(), min(), sum(),count()
+
+ RowNumber
+ -- We can use rownum with where clause.
+ It can be used with bigger or lower symbol
+  rownum
+
+
+
+
+-- Set Operators in SQL
+We use set operators to get results from
+both queries
+1- We must use 2 queries
+2- Queries must have the same column name
+3- Number of columns for the queries must be same
+-- UNION
+-- UNION ALL
+
+-- MINUS
+--It gives the result from first query
+--which doesn't exist in result of second query
+
+
+
+
+
+
+
+
+ DDL-> Data Definition Language
+ Create -> It will create a table
+ Alter  -> It will change the definition for the
+ table
+ Drop   -> Will remove all the data from table
+ as well as removing the structure
+ Truncate ->Will remove all the data from table
+ but will keep the structure of the table
+DML- Data Manipulation Language
+Insert -> Insert single row of data
+Update-> It will update the data in table
+Delete -> Delete row from the data table
+
+CRUD METHODS IN SQL
+CRUD - CREATE - READ - UPDATE - DELETE
+HTTP - POST   - GET  - PUT    - DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Do you do database testing?
+ Using structured query language we test relational data bases.
+ like oracle or mysql
+ For automation we use jdbc connection
+
+
+
+
+ResultSet object is related with my rows
+if I use
+
+resultSet.next() it will look at the next row
+next() method will return true if there is a next row other wise it will return false
+
+first() -> It is going to take resultset object on the first row
+this method will return true or false according if there is a row or not.
+
+
+last() It is going to take resultset object on the last row
+this method will return true or false according if there is a row or not.
+
+
+getRow() -> it is going to show what row resultset object is
+looking at currently
+
+
+deleteRow() it is going to delete what row resultset object is
+looking at currently
+
+
+getString() -> will take column name as parameter and it will return the value of the column if it is string.
+
+
+getObject() -> will take column name or number as parameter and it will return the value of the column as an object then we can convert it to its original object type.
+
+
+ResultSetMetaData object is related with my result
+columns
+// I will have some information and methods available
+// for my result table
+
+getColumnCount() -> Will give us count of all the
+columns and last column number in the table
+
+getColumnName() -> This method will
+take column number as parameter and will give us the name
+of the column number we provided.
+*Column number starts from 1 and ends at
+last column number*
+
+
+
+
+
+
+
+
+
+
+
+"select first_name, email, department_name
+                from employees e right join departments d
+                on d.department_id = e.department_id;
+                select * from students"
+
+
+ What is Sql?
+ Structured query language to access and create data base.
+
+ Which clauses do you mostly use when writing a query?
+
+ sql clauses used for limiting queried responses.
+
+ where -> we define the condition and check if it is true
+ it can be used with single row functions but can't be used with
+ multi-row functions
+
+group by -> it is used after the where clause
+it divides data in to groups
+
+having -> used to search for a condition after the group by
+can be used with multi row and single row functions. Having can be used in the absence of a group by.
+
+Order by -> Using a single or multiple column, we could arrange the data in ascending or descending order.
+cassandra database is not structural and non-relational
